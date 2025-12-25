@@ -153,6 +153,19 @@ with st.sidebar:
 example = """Chugh, R.,  &  Ruhi, U.  (2019)  .  Social media in higher education , a literature review
 Portman, M.E ,Smith, J. &   Jones, K.2025  .  Impact of science communication on youth .London: Sage"""
 
+st.markdown("#### Reference style context")
+
+style = st.selectbox(
+    "Select the referencing style you are working with:",
+    ["APA (recommended)", "MLA", "Chicago", "Harvard", "Other"],
+    index=0
+)
+
+st.caption(
+    "KleenRef currently cleans references for readability and consistency. "
+    "It does not fully reformat citation styles yet."
+)
+
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
@@ -202,3 +215,4 @@ st.markdown(
     '<div class="kleen-muted" style="text-align:center; margin-top: 8px;">Made for students & researchers • KleenRef</div>',
     unsafe_allow_html=True
 )
+
